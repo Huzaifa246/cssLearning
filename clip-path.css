@@ -1,0 +1,28 @@
+/* Used to create custom shapes by clipping visible area of HTML element */
+/* Specifies a clipping path where everything inside the path is visible and everything outside is clipped out */
+
+/* Clip-path */
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: aquamarine;
+  /* clip-path: circle(50% at 20px 0); where (50 at x-axis, y-axis)  */
+  clip-path: polygon(13% 23%, 51% 12%, 10% 33%);
+  transition: all 2s ease;
+}
+
+.container:hover {
+  clip-path: circle(90%);
+}
+/* clip-path : custom svg path  */
+/* clip-path : path("svgPath") */
+
+/* search css clip path generator and make shapes accordingly using (polygen)*/
+
+.practice {
+  /* <basic-shape> values */
+  clip-path: inset(100px 50px);
+  clip-path: ellipse(130px 140px at 10% 20%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+}

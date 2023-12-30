@@ -1,0 +1,48 @@
+/* <div class="frame">
+<div class="shape">
+</div>
+</div> */
+.frame {
+  width: 500px;
+  height: 500px;
+  border: 3px red;
+  perspective: 800px;
+}
+
+.shape {
+  width: 500px;
+  height: 500px;
+  background-color: chocolate;
+  transform: rotateX(45deg);
+  transition: all 3s ease;
+}
+
+/* Prespective used to see our objects in 3D shape */
+
+/* Perspective-origin CSS property determines position at which the viewer is looking */
+/* perspective-origin: center; */
+
+/* 
+examples of prespective origin
+perspective-origin: top;
+perspective-origin: bottom right;
+perspective-origin: -170%;
+perspective-origin: 500% 200%;
+
+perspective-origin: x-position y-position;
+*/
+
+/* NOTE: 
+perspective-origin and perspective properties are attached to the parent of a child transformed in 3-dimensional space
+*/
+
+
+/* 
+transform-style
+The transform-style CSS property sets whether children of an element are 
+positioned in the 3D space or are flattened in the plane of the element. 
+
+transform-style: flat;
+transform-style: preserve-3d;
+
+*/
