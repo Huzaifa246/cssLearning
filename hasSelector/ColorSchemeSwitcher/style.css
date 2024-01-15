@@ -1,0 +1,70 @@
+@import url("https://unpkg.com/papercss@1.9.2/dist/paper.css") layer(csspaper);
+
+body {
+  --primary-color: #ff9800;
+  --surface-color: #fff;
+  --body-color: #000;
+  --text-color: #eee;
+}
+
+body:has(option[value="light"]:checked) {
+  --primary-color: #6366f1;
+  --surface-color: #fff;
+  --body-color: #eee;
+  --text-color: #333;
+}
+
+body:has(option[value="dark"]:checked) {
+  --primary-color: #6366f1;
+  --surface-color: #1e293b;
+  --body-color: #0f172a;
+  --text-color: #94a3b8;
+}
+
+body:has(option[value="high-contrast"]:checked) {
+  --primary-color: #6366f1;
+  --surface-color: #1b1b1b;
+  --body-color: #000;
+  --text-color: #eee;
+}
+
+/* Demo style */
+body {
+  min-height: 100vh;
+  background-color: #f6eee3;
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #e5decf,
+    #e5decf 1px,
+    #f6eee3 1px,
+    #f6eee3
+  );
+  padding: 1rem;
+  color: var(--text-color);
+}
+
+section {
+  background-color: var(--surface-color);
+}
+
+h1 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+select {
+  background: var(--surface-color);
+  color: inherit;
+  transition: 0.1s all;
+  outline: none;
+}
+
+select:focus {
+  border-color: var(--primary-color);
+}
+
+option {
+  background-color: var(--surface-color);
+  color: inherit;
+}

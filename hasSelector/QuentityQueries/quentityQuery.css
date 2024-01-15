@@ -1,0 +1,13 @@
+/* quantity query  */
+
+body {
+  --primary-color: black;
+}
+body:has(option[value="light"]:checked) {
+  --primary-color: white;
+}
+
+/* All-but-me selector */
+.cardlist:has(li:hover) li:not(:hover) {
+  filter: blur(5px);
+}
